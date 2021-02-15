@@ -218,7 +218,7 @@ PC = sprites.create(img`
     . . . f f f f f f . . . . 
     . . . f f . . f f . . . . 
     `, SpriteKind.Player)
-grid.place(PC, tiles.getTileLocation(2, 2))
+tiles.placeOnTile(PC, tiles.getTileLocation(2, 2))
 PC.z = 1
 controller.moveSprite(PC, 75, 75)
 scene.cameraFollowSprite(PC)
@@ -238,7 +238,7 @@ Cat1 = sprites.create(img`
     . f d f f f d f f d f . . . 
     . f f . . f f . . f f . . . 
     `, SpriteKind.Friend)
-grid.place(Cat1, tiles.getTileLocation(5, 4))
+tiles.placeOnTile(Cat1, tiles.getTileLocation(5, 4))
 game.onUpdate(function () {
     if (controller.up.isPressed()) {
         PC.setImage(img`
